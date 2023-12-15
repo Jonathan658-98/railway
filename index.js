@@ -24,7 +24,7 @@ app.get("/info", (req, res) => {
     })
 });
 
-app.get("/receta", (req, res) => {   
+app.get("/productos", (req, res) => {   
     /*try {
         const data = sequelize.query("SELECT * FROM persona.users", { type: sequelize.QueryTypes.SELECT});
         res.json({
@@ -36,13 +36,13 @@ app.get("/receta", (req, res) => {
         return res.status(500).json({ message: error.message });
     }*/
 
-    sequelize.query("SELECT * FROM alimentos.receta", { type: sequelize.QueryTypes.SELECT})
+    sequelize.query("SELECT * FROM inventario.productos", { type: sequelize.QueryTypes.SELECT})
     .then((resultados) => {
         res.json(resultados);
     });
 });
 
-app.get("/usuario", (req, res) => {   
+app.get("/productos", (req, res) => {   
     /*try {
         const data = sequelize.query("SELECT * FROM persona.users", { type: sequelize.QueryTypes.SELECT});
         res.json({
@@ -54,7 +54,7 @@ app.get("/usuario", (req, res) => {
         return res.status(500).json({ message: error.message });
     }*/
 
-    sequelize.query("SELECT * FROM alimentos.usuario", { type: sequelize.QueryTypes.SELECT})
+    sequelize.query("SELECT * FROM inventario.productos", { type: sequelize.QueryTypes.SELECT})
     .then((resultados) => {
         res.json(resultados);
     });
@@ -72,7 +72,7 @@ const getUsers = () => {
 
     });
 }
-app.get("/recetas", (req, res) => {
+app.get("/productos", (req, res) => {
     getUsers()
     .then((data) =>{
         console.log(data);

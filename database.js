@@ -15,7 +15,7 @@ import Sequelize from "sequelize";
 // );
 
 export const sequelize = new Sequelize(
-  "db_rest",
+  "db_ventas",
    "postgres", 
    "65aCCbBE46ccE4cFD4GBC4b5E54F4CgB", 
    {
